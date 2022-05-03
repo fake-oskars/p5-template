@@ -16,7 +16,7 @@ export const Sketch = (p: p5) => {
 
   p.draw = () => {
     p.background(0);
-    p.fill([255, 0, 0]);
+    p.fill([255, 255, 254]);
     p.circle(w / 2, h / 2, 50);
   };
 };
