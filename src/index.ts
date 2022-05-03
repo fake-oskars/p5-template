@@ -1,8 +1,7 @@
-import p5 from "p5";
-import { Sketch } from "./Sketch";
 
-const container = document.getElementById("p5");
 
-if (container) {
-  new p5(Sketch, container);
-}
+import { Application } from '@splinetool/runtime';
+
+const canvas = document.getElementById('canvas3d');
+const app = new Application(canvas);
+app.load('https://prod.spline.design/xwangqr35zwMK5-B/scene.spline');

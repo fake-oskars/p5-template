@@ -1,22 +1,5 @@
-import p5 from "p5";
+import { Application } from '@splinetool/runtime';
 
-export const Sketch = (p: p5) => {
-  let w = window.innerWidth;
-  let h = window.innerHeight;
-
-  p.windowResized = () => {
-    w = window.innerWidth;
-    h = window.innerHeight;
-    p.resizeCanvas(p.windowWidth, p.windowHeight);
-  };
-
-  p.setup = () => {
-    p.createCanvas(p.windowWidth, p.windowHeight);
-  };
-
-  p.draw = () => {
-    p.background(0);
-    p.fill([255, 105, 254]);
-    p.circle(w / 2, h / 2, 50);
-  };
-};
+const canvas = document.getElementById('canvas3d');
+const app = new Application(canvas);
+app.load('https://prod.spline.design/xwangqr35zwMK5-B/scene.spline');
